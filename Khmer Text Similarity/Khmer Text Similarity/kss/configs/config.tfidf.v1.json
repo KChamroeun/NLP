@@ -1,0 +1,5 @@
+{
+    "min_x": 2,
+    "similarity_measure": "cosine",
+    "pretrained_weights": "asdfasdf.bin"
+}

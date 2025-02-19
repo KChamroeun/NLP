@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block title %}Khmer Text Similarity{% endblock %}
+
+{% block content %}
+
+
+<div class="page-wrapper">
+  <div id="sidebar-toggle" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </div>
+  <div id="sidebar" class="sidebar">
+    <ul>
+      <li><a href="#">Word Embedding Model</a></li>
+      <li>
+        <label for="touch1"><span id="dropdown-label1">Choose...</span></label>
+        <input type="checkbox" id="touch1">
+        <ul class="slide" id="slide1">
+          <li><a href="#" class="dropdown-item1">TF-IDF</a></li>
+          <li><a href="#" class="dropdown-item1">Fasttext</a></li>
+          <li><a href="#" class="dropdown-item1">BERT</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Similarity Measurement</a></li>
+      <li>
+        <label for="touch2"><span id="dropdown-label2">Choose...</span></label>
+
+        <input type="checkbox" id="touch2">
+        <ul class="slide" id="slide2">
+          <li><a href="#" class="dropdown-item2">Cosine Similarity</a></li>
+          <li><a href="#" class="dropdown-item2">Euclidean Distance</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <div class="page-wrapper">
+    <div class="content-area">
+      <div>
+        <form action="/process-text" method="post" enctype="multipart/form-data" class="text-form">
+          <textarea name="text" class="text-input" placeholder="Enter text here..."></textarea>
+          <input type="file" name="file" accept=".txt">
+          <button type="submit" class="btnn submit-button">Submit</button>
+        </form>
+
+        <!-- <div class="results-button">
+          <a href="result.html" class="btn btn-dark">View Result</a>
+        </div> -->
+        <div id="results-area">
+          {% if result %}
+              <h2>Matches</h2>
+              {% for r in result %}
+                <h4>{{ r[0] }} - ({{ r[1] }})</h4>
+                <p>{{ r[-1] }}</p>
+              {% endfor %}
+          {% endif %}
+          {% if message %}
+              <p>{{ message }}</p>
+          {% endif %}
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="static/script.js">
+  // window.onload = function () {
+  //   document.querySelector('.text-input').value = ''; 
+  //   document.querySelector('input[type="file"]').value = ''; 
+    
+  // };
+</script>
+
+
+{% endblock %}

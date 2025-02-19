@@ -1,0 +1,542 @@
+html, body {
+    background-color: rgb(255, 255, 255);
+    margin: 0; 
+    height: 100%; 
+    width: 100%; 
+    
+}
+
+
+.navbar-dark {
+    background-color: #ffffff; /* Darker shade */
+    position:relative;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Arial', sans-serif; /* Your preferred font */
+    font-size: 30px; /* Adjust size as needed */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #515151; /* Lighter shade */
+    font-family: "JetBrains Mono",monospace;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgb(149, 149, 149); /* Change to any color */
+}
+
+.home-container {
+    display: flex;
+}
+
+.footer {
+    background-color: #000000;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    font-family: "JetBrains Mono",monospace;
+    margin-top: 600px;
+    padding-top: 100px;
+}
+
+.footer-text {
+    color: #ffffff;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.col-sm {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Set the column height to take the full height of the viewport */
+}
+
+
+.buttonn {
+    /* background-color: #FCFCFD; */
+    position:relative;
+    margin-top:15%;
+    margin-bottom: 10%;
+    position: fixed;
+}
+
+.read {
+    margin-top: 40%;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    font-family: "JetBrains Mono",monospace;
+    display: flex;
+}
+
+.read-num {
+    font-family: "JetBrains Mono",monospace;
+    font-size:55px;
+    text-align: center;
+    color: black;
+    margin-top: 5%;
+}
+
+.read-desc {
+    font-family: "JetBrains Mono",monospace;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-top: 2%;
+}
+
+.streak {
+    margin-top: 30%;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.streak-num {
+    font-family: "JetBrains Mono",monospace;
+    font-size:55px;
+    text-align: center;
+    color: black;
+    margin-top: 5%;
+}
+
+.streak-desc {
+    font-family: "JetBrains Mono",monospace;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-top: 2%;
+}
+
+.time {
+    margin-top: 10%;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    font-family: "JetBrains Mono",monospace;
+}
+
+.time-num {
+    font-family: "JetBrains Mono",monospace;
+    font-size:55px;
+    text-align: center;
+    color: black;
+    margin-top: 5%;
+}
+
+.time-desc {
+    font-family: "JetBrains Mono",monospace;
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-top: 2%;
+}
+
+.no-underline {
+    text-decoration: none; /* Remove underline */
+}
+
+.no-underline:hover,
+.no-underline:focus {
+    text-decoration: none; /* Ensure underline does not reappear on hover or focus */
+}
+
+
+.button-30 {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 10px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#ffffff 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 60px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 22px;
+}
+
+
+.read-container {
+    width: 80vw;
+    max-width: 1000px; /* Ensure it does not grow beyond 1000px */
+    height: auto; /* Let the height scale with the content */
+    padding: 20vw; /* Height of the box */
+    background-color: rgb(255, 255, 255); /* White background for the box */
+    border: 2px solid rgb(154, 154, 154); /* Gray border */
+    padding-top: 50px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1); /* Optional: adds shadow to the box */
+    text-align: center;
+    /* margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 20%; */
+    margin: auto;
+    border-radius: 20px;
+
+    
+}
+
+.read-text{
+    font-family: "JetBrains Mono",monospace;
+    color: #000000;
+    font-size: 16px;
+}
+@media (min-width: 768px) {
+    .read-text {
+        font-size: 25px; /* Larger text on larger screens */
+    }
+}
+
+.wrap {
+    width: 90%; /* Make it take more space on smaller screens */
+    height: auto; /* Let the height be dynamic */
+    position: relative; /* Adjust based on layout needs */
+    margin: 20px auto; /* Centering it horizontally */
+    transform: none; /* Remove transform for better control */
+}
+
+@media (min-width: 768px) {
+    .wrap {
+        width: 40%; /* Smaller width on larger screens */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    border: 2px solid #323232;
+    border-right: none;
+    padding: 10px;
+    height: 40px;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+.searchTerm:focus{
+    color: #00B4CC; 
+}
+
+.searchButton {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #323232;
+    background: #323232;
+    text-align: center;
+    color: #fff;
+    border-radius: 0px 20px 20px 0px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 40%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle-container {
+    width: 50px;  /* Width of the box */
+    height: 50px; /* Height of the box */
+    /* background-color: rgb(255, 0, 0); */
+    background-color: transparent;
+    border: 2px solid rgb(154, 154, 154); /* Gray border */
+    padding-top: 10px;
+    box-shadow: 0 16px 32px rgba(0,0,0,0.1); 
+    text-align: center;
+    margin-top: 40%;
+    
+    margin: auto;
+    border-radius: 50px;
+}
+
+
+.footer {
+    background-color: #000000;
+    position: fixed; /* Keep this outside the media query to apply universally */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #ffffff;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    z-index: 1000; /* Ensuring it stays on top */
+    padding: 10px 0; /* Add some padding */
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for better visibility */
+}
+
+
+
+/* .button-30:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-30:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.button-30:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+} */
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* .page-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+} */
+
+#sidebar-toggle {
+    position: absolute;
+    top: 20px; /* Adjust based on design preference */
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* .content-area {
+    display: flex;
+    height: 500px;
+    margin-left: 0px; 
+} */
+
+/* .text-input-area {
+    
+    padding: 0px;
+    width: 200px;
+    height: 500px;
+    border-right: 2px solid #ccc; 
+} */
+/* 
+textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    
+} */
+
+.divider {
+    width: 1px;
+    background-color: #ccc;
+    height: 600px;
+}
+
+.document-list-area {
+    flex: 1; /* Flex grow */
+    padding: 20px;
+    margin-bottom: 600px;
+    padding-bottom: 30px;
+}
+
+.document-list-area ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.document-list-area li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#sidebar-toggle {
+    position: fixed; /* Ensures it stays in a fixed position relative to the viewport */
+    top: 90px; /* Adjust this value to position vertically */
+    right: 10px; /* Aligns the button to the far right of the screen */
+    width: 40px; /* Diameter of the button */
+    height: 40px; /* Diameter of the button */
+    background-color: rgb(0, 0, 0); /* Button color, change as needed */
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer; /* Changes cursor to pointer on hover to indicate it's clickable */
+    z-index: 1001; /* Ensures it stays above other elements */
+    opacity: 1; /* Fully visible by default */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity changes */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Vertically centers the icon */
+    justify-content: center; /* Horizontally centers the icon */
+    margin-left: 30px;
+}
+
+#sidebar-toggle i {
+    color: #ffffff; /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 20;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 70%;
+    background: rgb(203, 203, 203);
+    transition: 0.3s;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+    border-radius: 15px 50px 30px 5px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    
+}
+
+
+li a {
+    text-decoration: none;
+    color: #2d2f31;
+  }
+  
+nav {
+width: 300px;
+margin: 40px auto;
+}
+
+span {
+width: 200px;
+padding: 10px;
+background: #ffffff;
+color: rgb(0, 0, 0);
+font-size: 1em;
+cursor: pointer;
+display: block;
+border-color: #000000;
+}
+
+span::after {
+float: center;
+right: 10%;
+}
+
+.slide {
+clear: both;
+width: 100%;
+height: 0px;
+overflow: hidden;
+text-align: center;
+transition: height .4s ease;
+}
+
+.slide li {
+padding: 5px;
+}
+
+.slide li:hover {
+background-color: #e0e0e0; /* Change this to your desired hover color */
+}
+
+#touch1, #touch2 {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+  }
+  
+  #touch1:checked + #slide1, #touch2:checked + #slide2 {
+    height: 200px;
+  }
+
+
+
+.submit-button {
+    width: 100%;       /* Full width of the container */
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #000000; /* Bootstrap primary color */
+    color: white;      /* Text color */
+    border: none;      /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;   /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #707070; /* Darker shade on hover */
+}
+
+.text-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increases space between the textarea and the button */
+    padding: 20px; /* Adds padding around the form for better layout */
+}
+
+.text-input {
+    width: 100%; /* Full width of its parent */
+    min-height: 300px; /* Larger default height */
+    padding: 12px; /* Comfortable padding inside the textarea */
+    box-sizing: border-box; /* Includes padding and border in the width and height */
+    resize: vertical; /* Allows the user to resize the textarea vertically if needed */
+    font-size: 16px; /* Larger font size for better readability */
+    border: 1px solid #ccc; /* Subtle border for the textarea */
+}
+
+@media (max-width: 1024px) {
+    .text-input {
+        min-height: 250px; /* Slightly smaller height for tablet devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .text-input {
+        min-height: 200px; /* Smaller height for mobile devices */
+    }
+}
+

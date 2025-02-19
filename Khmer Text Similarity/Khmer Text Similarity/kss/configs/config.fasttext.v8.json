@@ -1,0 +1,15 @@
+
+
+{
+    "model": "skipgram",
+    "vector_size": 100,
+    "window": 5,
+    "epochs": 50,
+    "alpha": 0.01,
+    "min_n": 3,
+    "max_n": 6,
+    "decision_threshold": 0.5,
+    "similarity_measure": "cosine_similarity",
+    "patience": 5,
+    "log_file": "training_log.json"
+}
