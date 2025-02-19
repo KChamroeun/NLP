@@ -1,0 +1,14 @@
+# torch==2.3.0
+Flask==3.0.3
+scipy==1.11.2
+gensim==4.3.2
+pandas==2.2.2
+numpy==1.26.4
+khmer-nltk==1.6
+tokenizers==0.19.1 
+scikit_learn==1.4.2
+transformers==4.40.2
+tensorflow==2.16.1
+tensorflow-text==2.10
+keras-nlp
+keras
